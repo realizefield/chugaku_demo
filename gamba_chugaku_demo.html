@@ -151,6 +151,110 @@
   .cta-btn:hover { opacity: 0.85; }
 
   footer { text-align: center; padding: 24px; font-size: 0.72rem; color: var(--muted); border-top: 1px solid #e0e0e0; margin-top: 40px; }
+
+  /* ===== 数学復習ボタン ===== */
+  .review-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px 20px 20px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--orange);
+  }
+  .review-intro {
+    font-size: 0.78rem; color: var(--muted); line-height: 1.8;
+    margin-bottom: 16px;
+    background: var(--orange-light);
+    border-radius: 8px; padding: 10px 14px;
+  }
+  .review-intro strong { color: var(--orange); }
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  @media(max-width: 560px){ .review-grid { grid-template-columns: 1fr; } }
+  .review-btn {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--navy-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-decoration: none;
+    color: var(--navy);
+    transition: all 0.2s;
+  }
+  .review-btn:hover {
+    border-color: var(--orange);
+    background: var(--orange-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(232,101,10,0.15);
+  }
+  .review-btn-icon {
+    width: 38px; height: 38px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.3rem; background: white;
+  }
+  .review-btn-title { font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .review-btn-sub { font-size: 0.65rem; color: var(--muted); }
+  .review-btn:hover .review-btn-title { color: var(--orange); }
+
+  /* ===== 復習ボタンセクション ===== */
+  .review-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 24px 24px;
+    margin-bottom: 48px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--orange);
+  }
+  .review-intro {
+    font-size: 0.8rem; color: var(--muted); line-height: 1.8;
+    margin-bottom: 20px;
+    background: var(--orange-light);
+    border-radius: 8px; padding: 12px 16px;
+  }
+  .review-intro strong { color: var(--orange); }
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  @media(max-width: 500px){ .review-grid { grid-template-columns: 1fr; } }
+  .review-btn {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--navy-light);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .review-btn:hover {
+    border-color: var(--orange);
+    background: var(--orange-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(232,101,10,0.15);
+  }
+  .review-btn-icon {
+    width: 40px; height: 40px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    background: white;
+  }
+  .review-btn-body { flex: 1; }
+  .review-btn-title { font-size: 0.85rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .review-btn-sub { font-size: 0.68rem; color: var(--muted); font-weight: 400; }
+  .review-btn-arrow { font-size: 1rem; color: var(--orange); flex-shrink: 0; }
+  .review-btn.highlight {
+    background: linear-gradient(135deg, #fff4ec, #fff);
+    border-color: var(--orange);
+  }
+  .review-btn.highlight .review-btn-title { color: var(--orange); }
 </style>
 </head>
 <body>
@@ -236,7 +340,7 @@
     </a>
 
     <!-- 数学 -->
-    <a class="subject-card s2" href="https://realizefield.github.io/hirei/" target="_blank">
+    <a class="subject-card s2" href="https://realizefield.github.io/j-math/index.html" target="_blank">
       <div class="card-top">
         <div class="card-emoji">📐</div>
         <div class="card-info">
@@ -315,6 +419,45 @@
       <div class="card-footer-link">デモを見る <span>→</span></div>
     </a>
 
+  </div>
+
+  <!-- ===== 数学 復習ボタン ===== -->
+  <div class="section-title">📐 数学 単元別 復習はこちら</div>
+  <div class="review-section">
+    <div class="review-intro">
+      <strong>一次方程式につながる3つの計算</strong>を個別に復習できます。<br>
+      苦手な単元だけ選んで、くり返し練習しましょう！
+    </div>
+    <div class="review-grid">
+
+      <!-- MA 分数・小数の計算 -->
+      <a class="review-btn" href="https://realizefield.github.io/j-math/index.html#MA" target="_blank">
+        <div class="review-btn-icon">📐</div>
+        <div>
+          <div class="review-btn-title">分数・小数の計算</div>
+          <div class="review-btn-sub">MA単元 ／ 基礎</div>
+        </div>
+      </a>
+
+      <!-- MB 正負の数の計算 -->
+      <a class="review-btn" href="https://realizefield.github.io/j-math/index.html#MB" target="_blank">
+        <div class="review-btn-icon">➕</div>
+        <div>
+          <div class="review-btn-title">正負の数の計算</div>
+          <div class="review-btn-sub">MB単元 ／ 基礎</div>
+        </div>
+      </a>
+
+      <!-- MD 一次方程式 -->
+      <a class="review-btn" href="https://realizefield.github.io/j-math/index.html#MD" target="_blank">
+        <div class="review-btn-icon">⚖️</div>
+        <div>
+          <div class="review-btn-title">方程式の計算</div>
+          <div class="review-btn-sub">MD単元 ／ 一次方程式</div>
+        </div>
+      </a>
+
+    </div>
   </div>
 
   <!-- ===== 特長 ===== -->
